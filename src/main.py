@@ -2,18 +2,6 @@ import time
 from google_api_handler import GoogleAPIHandler
 
 
-class HandleTime:
-
-    def __init__(self):
-        pass
-
-
-# Ask user when to start
-# When started, store at time when started
-# When ended, store at time when ended
-# Call the GoogleAPIHandler to insert event at that specific time on same day
-# When done, should be able to see the event in the calendar
-
 google_api_handler = GoogleAPIHandler()
 
 
