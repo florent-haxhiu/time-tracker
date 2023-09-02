@@ -57,7 +57,7 @@ class GoogleAPIHandler:
         except HttpError as error:
             print(f'Something went wrong {error}')
 
-    def add_event_when_programming_session_is_complete(self, body):
+    def add_event_when_session_is_complete(self, body):
         self._get_access_token()
         try:
             service = build('calendar', 'v3', credentials=self._creds)
