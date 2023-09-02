@@ -26,8 +26,6 @@ def convert_time_to_required_datetime():
     started_date = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(started))
     stopped_date = time.strftime("%Y-%m-%dT%H:%M:%S", time.localtime(stopped))
 
-    print(started_date, stopped_date)
-
     body = {
         'summary': summary,
         'start': {
@@ -40,8 +38,9 @@ def convert_time_to_required_datetime():
         }
     }
 
+    print(f"Started {summary} session")
+
     google_api_handler.add_event_when_session_is_complete(body)
 
 
 convert_time_to_required_datetime()
-# google_api_handler.get_calendar_list()
